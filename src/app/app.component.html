@@ -1,7 +1,9 @@
 <h1>{{title}}</h1>
 <nav>
-  <button type="button" routerLink="/payments">Payments</button>
-  <button type="button" routerLink="/billers">Billers</button>
-  <button type="button" routerLink="/customers">Customers</button>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-outline-primary" routerLink="/payments">Payments</button>
+    <button type="button" class="btn btn-outline-primary" routerLink="/billers">Billers</button>
+    <button type="button" class="btn btn-outline-primary" routerLink="/customers">Customers</button>
+  </div>
 </nav>
 <router-outlet></router-outlet>

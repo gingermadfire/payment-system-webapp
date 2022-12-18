@@ -5,8 +5,9 @@ import { AppComponent } from './app.component';
 import { BillerComponent } from './biller/biller.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CustomerComponent } from './customer/customer.component';
-import {RouterLink, RouterModule, RouterOutlet} from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     RouterLink,
     RouterOutlet,
-    RouterModule.forRoot([]),
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
