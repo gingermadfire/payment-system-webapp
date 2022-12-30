@@ -8,6 +8,7 @@ import { CustomerComponent } from './customer/customer.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterLink,
     RouterOutlet,
     AppRoutingModule,

@@ -1,7 +1,11 @@
+import {Customer} from "./customer";
+import {Biller} from "./biller";
+
 export interface Payment {
   id: number;
-  customerId: number;
-  billerId: number;
+  customer: Customer;
+  biller: Biller;
   account: string;
   amount: number;
+  dateTime: number;
 }

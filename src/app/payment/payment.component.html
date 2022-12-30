@@ -1,0 +1,21 @@
+<h1>Payments</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Customer</th>
+    <th scope="col">Biller</th>
+    <th scope="col">Account</th>
+    <th scope="col">Amount</th>
+    <th scope="col">Date</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let payment of payments">
+    <td>{{payment.id}}</td>
+    <td>{{payment.customer.firstName + ' ' + payment.customer.lastName}}</td>
+    <td>{{payment.biller.companyName}}</td>
+    <td>{{payment.account}}</td>
+    <td>{{payment.amount}}</td>
+    <td>{{payment.dateTime | date: 'longDate'}}</td>
+  </tr>
+</table>
