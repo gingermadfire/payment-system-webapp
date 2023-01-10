@@ -1,0 +1,13 @@
+<h2>Billers</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Company Name</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let biller of billers">
+    <td>{{biller.id}}</td>
+    <td>{{biller.companyName}}</td>
+  </tr>
+</table>

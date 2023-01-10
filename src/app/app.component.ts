@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {CreationModalComponent} from "./creation-modal/creation-modal.component";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Bill Payment System';
+
+  constructor(private ngbModal: NgbModal) {
+  }
+
+  open() {
+    this.ngbModal.open(CreationModalComponent);
+  }
 }

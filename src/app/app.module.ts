@@ -9,21 +9,26 @@ import {RouterLink, RouterOutlet} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from "@angular/common/http";
+import { CreationModalComponent } from './creation-modal/creation-modal.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     BillerComponent,
     PaymentComponent,
-    CustomerComponent
+    CustomerComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterLink,
     RouterOutlet,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    CreationModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">New Payment</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="ngbActiveModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="paymentForm" (ngSubmit)="savePayment()">
+    <div class="d-grid gap-2 col-6 mx-auto">
+
+      <select id="select-customers" class="form-select" formControlName="customerId" aria-label="Default select example">
+        <option selected>Customers</option>
+        <option *ngFor="let customer of customers" [value]="customer.id">{{customer.firstName + ' ' + customer.lastName}}</option>
+      </select>
+
+      <select id="select-billers" class="form-select" formControlName="billerId" aria-label="Default select example">
+        <option selected>Billers</option>
+        <option *ngFor="let biller of billers" [value]="biller.id">{{biller.companyName}}</option>
+      </select>
+
+      <div class="form-group">
+        <label for="accountInput">Account</label>
+        <input type="number" class="form-control" id="accountInput" formControlName="account" placeholder="Enter account">
+      </div>
+
+      <div class="form-group">
+        <label for="amountInput">Amount</label>
+        <input type="number" class="form-control" id="amountInput" formControlName="amount" placeholder="Enter amount">
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-outline-dark">Save</button>
+    </div>
+  </form>
+</div>
